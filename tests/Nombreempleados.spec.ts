@@ -11,7 +11,7 @@ test ('obtenerUsernameRegistrados', async ({ page }) => {
   const Employees: string[] = [];
   const rowCount = await rows.count();
   for (let i = 1; i < rowCount; i++) {
-    const cell = rows.nth(i+2).getByRole('cell').nth(1);
+    const cell = rows.nth(i+2).getByRole('cell').nth(1+2);
     const EmployeeName = await cell.textContent();
     if (EmployeeName) {
       Employees.push(EmployeeName);
